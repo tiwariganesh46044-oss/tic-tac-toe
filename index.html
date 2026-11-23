@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Play Tic Tac Toe with your friends. Enjoy a modern two-player gaming experience.">
+
+    <title>Tic Tac Toe | Ultimate Game</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Main Game Container -->
+    <main class="game-container">
+
+        <!-- Game Header -->
+        <header class="game-header">
+            <h1>Tic <span>Tac</span> Toe</h1>
+            <p>Challenge Your Friends!</p>
+        </header>
+
+        <!-- Theme Toggle -->
+        <div class="theme-control">
+            <button id="themeToggle" class="theme-btn" aria-label="Switch to light mode">
+                ☀️ Light Mode
+            </button>
+        </div>
+
+        <!-- Sound Toggle -->
+        <div class="sound-control">
+            <button id="soundToggle" class="sound-btn" aria-label="Turn sound off">
+                🔊 Sound ON
+            </button>
+        </div>
+
+        <!-- Scoreboard -->
+        <section class="scoreboard">
+
+
+
+            <div class="score-card player-x active">
+
+                <h2 id="playerXName">Player X</h2>
+
+                <input type="text" id="playerXInput" class="player-name-input" placeholder="Enter Player X Name"
+                    maxlength="15" aria-label="Player X name">
+
+                <span class="player-symbol">X</span>
+
+                <p class="score" id="scoreX">0</p>
+
+            </div>
+
+            <div class="score-card player-o">
+
+                <h2 id="playerOName">Player O</h2>
+
+                <input type="text" id="playerOInput" class="player-name-input" placeholder="Enter Player O Name"
+                    maxlength="15" aria-label="Player O name">
+
+                <span class="player-symbol">O</span>
+
+                <p class="score" id="scoreO">0</p>
+
+            </div>
+
+        </section>
+
+        <!-- Game Status -->
+        <section class="game-status">
+            <p id="statusText">Player X's Turn</p>
+        </section>
+
+        <!-- Tic Tac Toe Board -->
+        <section class="game-board" id="gameBoard">
+
+            <button class="cell" data-index="0" aria-label="Cell 1"></button>
+            <button class="cell" data-index="1" aria-label="Cell 2"></button>
+            <button class="cell" data-index="2" aria-label="Cell 3"></button>
+
+            <button class="cell" data-index="3" aria-label="Cell 4"></button>
+            <button class="cell" data-index="4" aria-label="Cell 5"></button>
+            <button class="cell" data-index="5" aria-label="Cell 6"></button>
+
+            <button class="cell" data-index="6" aria-label="Cell 7"></button>
+            <button class="cell" data-index="7" aria-label="Cell 8"></button>
+            <button class="cell" data-index="8" aria-label="Cell 9"></button>
+
+        </section>
+
+        <!-- Game Buttons -->
+        <section class="game-controls">
+
+            <button id="restartBtn" class="control-btn">
+                Restart Game
+            </button>
+
+            <button id="newGameBtn" class="control-btn secondary-btn">
+                New Game
+            </button>
+
+        </section>
+
+
+        <!-- Game Statistics Dashboard -->
+        <section class="statistics-section">
+
+            <h2>📊 Game Statistics</h2>
+
+            <div class="statistics-grid">
+
+                <div class="stat-card">
+                    <h3>Total Games</h3>
+                    <p id="totalGames">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Player X Wins</h3>
+                    <p id="totalWinsX">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Player O Wins</h3>
+                    <p id="totalWinsO">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Draws</h3>
+                    <p id="totalDraws">0</p>
+                </div>
+
+            </div>
+
+            <div class="win-percentage">
+
+                <p>
+                    Player X Win Rate:
+                    <strong id="winRateX">0%</strong>
+                </p>
+
+                <p>
+                    Player O Win Rate:
+                    <strong id="winRateO">0%</strong>
+                </p>
+
+            </div>
+
+            <div class="history-section">
+
+                <h3>🏆 Recent Game History</h3>
+
+                <ul id="gameHistoryList">
+                    <li>No games played yet.</li>
+                </ul>
+
+                <button id="clearHistoryBtn" class="control-btn secondary-btn">
+                    Clear History
+                </button>
+
+            </div>
+
+        </section>
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>Made with Ganesh Tiwari ❤️ | Tic Tac Toe Game</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
